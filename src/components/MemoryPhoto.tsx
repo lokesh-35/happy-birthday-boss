@@ -8,7 +8,8 @@ export default function MemoryPhoto() {
     return localStorage.getItem('bindu_birthday_memory') || null;
   });
 
-  const displayPhoto = photo || 'bb.jpeg';
+  const defaultPhoto = '/bb.jpeg';
+  const displayPhoto = photo || defaultPhoto;
 
   return (
     <div className="max-w-2xl mx-auto px-6 text-center animate-fade-in">
