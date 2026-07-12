@@ -1,0 +1,6 @@
+{
+  "name": "Birthday Surprise for Bindu",
+  "description": "A premium, aesthetic, and responsive birthday surprise website for wife Bindu, featuring a dreamy beach-inspired background, memories timeline, favorites, interactive cake, music player, and particle effects.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
