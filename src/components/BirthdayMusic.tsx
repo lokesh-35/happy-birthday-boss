@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Music, Volume2, VolumeX, Sparkles } from 'lucide-react';
 
-// Frequencies for "Happy Birthday to You" (C4 to C5 octave region)
+// Frequencies for the requested custom melody (C4 to C5 octave region)
 const NOTES = {
   'C4': 261.63,
   'D4': 293.66,
@@ -22,41 +22,59 @@ interface MelodyNode {
 }
 
 const MELODY: MelodyNode[] = [
-  { note: 'C4', duration: 0.5 },
-  { note: 'C4', duration: 0.5 },
-  { note: 'D4', duration: 1.0 },
+  { note: 'C4', duration: 0.75 },
+  { note: 'E4', duration: 0.5 },
+  { note: 'G4', duration: 0.75 },
+  { note: 'A4', duration: 0.75 },
+  { note: 'G4', duration: 0.5 },
+  { note: 'E4', duration: 0.75 },
+  { note: 'D4', duration: 0.5 },
   { note: 'C4', duration: 1.0 },
-  { note: 'F4', duration: 1.0 },
-  { note: 'E4', duration: 2.0 },
-  
-  { note: 'C4', duration: 0.5 },
-  { note: 'C4', duration: 0.5 },
-  { note: 'D4', duration: 1.0 },
-  { note: 'C4', duration: 1.0 },
-  { note: 'G4', duration: 1.0 },
-  { note: 'F4', duration: 2.0 },
-  
-  { note: 'C4', duration: 0.5 },
-  { note: 'C4', duration: 0.5 },
-  { note: 'C5', duration: 1.0 },
-  { note: 'A4', duration: 1.0 },
-  { note: 'F4', duration: 1.0 },
+
+  { note: 'E4', duration: 0.5 },
+  { note: 'G4', duration: 0.75 },
+  { note: 'A4', duration: 0.75 },
+  { note: 'G4', duration: 0.5 },
+  { note: 'E4', duration: 0.75 },
+  { note: 'D4', duration: 0.5 },
   { note: 'E4', duration: 1.0 },
-  { note: 'D4', duration: 2.0 },
+  { note: 'C4', duration: 2.0 },
+
+  // Extended verse - Happy Birthday variation
+  { note: 'C4', duration: 0.5 },
+  { note: 'C4', duration: 0.5 },
+  { note: 'D4', duration: 0.75 },
+  { note: 'C4', duration: 0.75 },
+  { note: 'F4', duration: 0.75 },
+  { note: 'E4', duration: 1.5 },
   
+  { note: 'C4', duration: 0.5 },
+  { note: 'C4', duration: 0.5 },
+  { note: 'D4', duration: 0.75 },
+  { note: 'C4', duration: 0.75 },
+  { note: 'G4', duration: 0.75 },
+  { note: 'F4', duration: 1.5 },
+  
+  { note: 'C4', duration: 0.5 },
+  { note: 'C4', duration: 0.5 },
+  { note: 'C5', duration: 0.75 },
+  { note: 'A4', duration: 0.75 },
+  { note: 'F4', duration: 0.75 },
+  { note: 'E4', duration: 0.75 },
+  { note: 'D4', duration: 1.0 },
   { note: 'Bb4', duration: 0.5 },
   { note: 'Bb4', duration: 0.5 },
-  { note: 'A4', duration: 1.0 },
-  { note: 'F4', duration: 1.0 },
-  { note: 'G4', duration: 1.0 },
-  { note: 'F4', duration: 2.5 },
+  { note: 'A4', duration: 0.75 },
+  { note: 'F4', duration: 0.75 },
+  { note: 'G4', duration: 0.75 },
+  { note: 'F4', duration: 2.0 },
 ];
 
 export default function BirthdayMusic() {
   const [isPlaying, setIsPlaying] = useState(false);
   const [currentNoteIndex, setCurrentNoteIndex] = useState(-1);
   const audioCtxRef = useRef<AudioContext | null>(null);
-  const tempo = 135; // beats per minute (BPM)
+  const tempo = 110; // beats per minute (BPM) for a softer, more lyrical tune
   const beatDuration = 60 / tempo; // duration of a single beat in seconds
   const currentTimeoutRef = useRef<number | null>(null);
   const currentPlayTimeRef = useRef<number>(0);
@@ -194,7 +212,7 @@ export default function BirthdayMusic() {
             className="hidden sm:inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-pink-100/60 dark:bg-pink-950/40 border border-pink-200/40 text-[9px] font-bold tracking-widest text-pink-600 dark:text-pink-400 uppercase select-none animate-pulse"
           >
             <Sparkles size={8} className="text-pink-500 animate-spin" style={{ animationDuration: '3s' }} />
-            Melody Playing
+            Special Tune Playing
           </motion.span>
         )}
       </AnimatePresence>
@@ -206,7 +224,7 @@ export default function BirthdayMusic() {
             ? 'bg-pink-100/80 border-pink-300 text-pink-600 shadow-[0_0_12px_rgba(244,63,94,0.25)] dark:bg-pink-950/60 dark:border-pink-800 dark:text-pink-400 scale-105'
             : 'bg-white/30 dark:bg-white/5 hover:bg-white/50 dark:hover:bg-white/10 border-white/40 dark:border-white/10 text-slate-600 dark:text-slate-300 hover:scale-105'
         }`}
-        title={isPlaying ? "Pause Birthday Chimes 🎵" : "Play Birthday Chimes! 🎵"}
+        title={isPlaying ? "Pause Special Tune 🎵" : "Play Special Tune! 🎵"}
       >
         {/* Floating audio wave bars when playing */}
         {isPlaying ? (

@@ -98,14 +98,14 @@ export default function BirthdayLetter() {
                 <p>Thank you for being such an amazing person in my life.</p>
 
                 <p>
-                  From the day we met on January 29, life has become brighter with your love and presence as my beautiful wife.
+                  From the day we met on January 29, life has become brighter with your love and presence as my beautiful best friend.
                   I hope your birthday is filled with happiness, laughter, peace, and countless beautiful memories.
                 </p>
 
                 <p>May every dream you have come true.</p>
 
                 <p>
-                  No matter where life takes us, you'll always have my heart as my beloved wife, partner, and best friend for life.
+                  No matter where life takes us, you'll always have my heart as my beloved best friend, partner, and forever companion.
                 </p>
 
                 <div className="pt-4 text-right">

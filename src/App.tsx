@@ -173,8 +173,8 @@ export default function App() {
                   transition={{ delay: 0.3 }}
                   className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-pink-50/80 dark:bg-pink-950/40 border border-pink-200/40 dark:border-pink-900/30 text-[10px] font-display font-bold uppercase tracking-widest text-pink-600 dark:text-pink-400 shadow-sm"
                 >
-                  <Sparkles size={11} className="animate-spin text-pink-500" style={{ animationDuration: '4s' }} />
-                  Wife Special ✨
+                  <span className="inline-block animate-spin text-sm" style={{ animationDuration: '4s' }}>🐷</span>
+                  Best Friend Special
                 </motion.span>
 
                 {/* Title Header with clean gradient text & Cormorant styling */}
@@ -283,7 +283,7 @@ export default function App() {
             <Heart size={20} className="text-pink-500 fill-pink-500 mx-auto animate-pulse" />
             
             <p className="font-display text-xs sm:text-sm text-slate-600 dark:text-slate-300 font-medium">
-              Made with lots of love and appreciation for my beautiful wife Bindu ❤️
+              Made with lots of love and appreciation for my beautiful best friend Bindu ❤️
             </p>
             
             <p className="text-[10px] text-slate-400 dark:text-slate-500 uppercase tracking-widest">

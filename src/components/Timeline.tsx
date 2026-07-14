@@ -28,8 +28,8 @@ export default function Timeline() {
     {
       id: 'celebration',
       date: 'July 16',
-      title: 'Celebrating My Wife 🎂',
-      description: 'Celebrating the incredible woman you are. Happy birthday to the queen of my heart, my soulmate, and my beloved wife. Here’s to a lifetime of sunsets, laughs, and pure love.',
+      title: 'Celebrating My Best Friend 🎂',
+      description: 'Celebrating the incredible woman you are. Happy birthday to the queen of my heart, my soulmate, and my beloved best friend. Here’s to a lifetime of sunsets, laughs, and pure love.',
       icon: 'award',
     },
   ];
